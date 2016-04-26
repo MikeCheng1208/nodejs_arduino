@@ -7,7 +7,7 @@
 2.	安裝 [`Arduino`](https://www.arduino.cc/en/Main/Software)
 3.	在命令視窗內執行 `npm i -g gulp`
 4.  在命令視窗內執行 `npm i`
-5.  電腦接上 Arduino
+5.  電腦接上 `Arduino`
 
 -	`npm i -g gulp` 會全域安裝 `Gulp`，就可使用 `gulp` 指令
 -	`npm i` 會安裝本專案使用的開發套件
@@ -16,9 +16,9 @@
 
 注意事項
 --
-1.	本範例使用 socket.io 來做為 web跟Arduino溝通的橋梁
+1.	本範例使用 `socket.io` 來做為 `web`跟`Arduino`溝通的橋梁
 2.	須在http環境下使用
-3.	本範例使用[`johnny-five`](http://johnny-five.io/)這套nodejs套件來控制Arduino
+3.	本範例使用[`johnny-five`](http://johnny-five.io/)這套`nodejs`套件來控制`Arduino`
 4.  `src/` 資料夾內檔案會經過編譯壓縮到 `app/`資料夾內
 
 
