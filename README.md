@@ -5,7 +5,7 @@
 --
 1.	安裝 [`nodejs`](https://nodejs.org/en/)
 2.	安裝 [`Arduino`](https://www.arduino.cc/en/Main/Software)
-3.	在命令視窗內執行 npm i -g gulp
+3.	在命令視窗內執行 `npm i -g gulp`
 4.  在命令視窗內執行 `npm i`
 5.  電腦接上 Arduino
 
