@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Servo馬達</title>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//cdn.socket.io/socket.io-1.4.5.js"></script>
+</head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;	
+		}
+		a{
+			display:block;
+			width: 100px;
+			height: 30px;
+			text-align:center;
+			line-height:30px;
+			background-color:#F9FFB3;
+			color:#000;
+			margin-bottom:10px;
+		}
+		a:hover{
+			background-color:#FFC549;
+		}
+		.box{
+			width: 200px;
+			height: 100px;
+			background-color:#ccc;
+			padding-top:30px;
+		}
+		input{
+			display:block;
+			width: 150px;
+			height: 30px;
+			margin:0px auto 0 auto;
+		}
+		#main{
+			margin: 10px auto 0 auto;
+		}
+	</style>
+	<script>
+		$(function(){
+	       	var socket = io.connect("127.0.0.1:3000");
+			$("#maxBtn").on("mousedown",function(){
+				socket.emit('Servo',{
+					deg:"180"
+				})	
+			})
+			$("#minBtn").on("mouseup",function(){
+				socket.emit('Servo',{
+					deg:"0"
+				})	
+			})
+			$("#main").on("mouseup",function(){
+				socket.emit('Servo',{
+					deg:"auto",
+					int: $(".degInt").val()
+				})	
+			})
+		})
+	</script>
+<body>
+	<a id="maxBtn" href="javascritp:;">180度</a>
+	<a id="minBtn" href="javascritp:;">0度</a>
+
+	<div class="box">
+		<input class="degInt" type="text" name="" value="" placeholder="請填寫角度"></input>
+		<a id="main" href="javascritp:;">指定的角度</a>
+	</div>
+</body>
+</html>
